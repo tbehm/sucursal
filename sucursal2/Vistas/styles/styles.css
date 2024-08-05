@@ -1,0 +1,634 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #CACACA;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #333;    /* color of the scroll thumb */
+}
+
+/*INDEX*/
+
+section{
+	padding: 10px;
+}
+
+.links li input[ type="submit"] {
+    position: relative;
+    padding: 10px 20px;
+    background-color: var(--button-color); 
+    color: var(--header-font-color);
+    border-radius: 5px;
+    width: 230px;
+    height: 70px;
+    cursor: pointer;
+    }
+.links li input[type="submit"]:hover {
+    background-color: var(--button-hover-color); 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    width: 230px;
+    height: 70px;
+    border-radius: 5px;
+    
+} 
+/*.menu{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.menu .links{
+    list-style: none;
+}
+.menu .links input[type="submit"]{
+
+    margin-bottom: 15px;
+    width: 230px;
+    height:70px;
+    padding: 30px;
+}*/
+#box{
+    display: flex;
+    justify-content: center;
+}
+.h-esta{
+    height: 40px;
+    padding-top: 10px;
+    width: 100%;
+    background: rgba(54, 162, 235, 0.2);
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/*CARRITO*/
+
+.carrito {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    max-height: 180px;
+    overflow-x: auto;
+}
+
+.carrito::-webkit-scrollbar {
+    height: 8px;               /* width of the entire scrollbar */
+}
+
+.carrito::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+}
+
+.carrito::-webkit-scrollbar-thumb {
+    background-color: #333;    /* color of the scroll thumb */
+}
+
+#lista-carrito {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+#lista-carrito li {
+    padding: 5px;
+    border: 1px solid #CACACA;
+    margin-left: 10px;
+    border-radius: 10px;
+    min-width: max-content;
+    text-align: center;
+}
+
+.caja-pedido{
+    display: flex;
+    position: sticky;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.caja-pedido h2{
+    display: flex;
+}
+
+button{
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buton-carrito-v{/*BOTON VER PEDIDO*/
+    background-color: #333;
+}
+
+.buton-carrito-v:hover {
+    transition: all .4s;
+    background-color: grey;
+}
+
+.buton-carrito-r{/*BOTON REALIZAR*/
+    background-color: #4CAF50;
+    margin-top: 15px;
+}
+
+.buton-carrito-r:hover {
+    transition: all .4s;
+    background-color: #3A863D;
+}
+
+.buton-carrito-c{/*BOTON CANCELAR*/
+    background-color: #f44336;
+}
+
+.buton-carrito-c:hover {
+    transition: all .4s;
+    background-color: #D54035;
+}
+
+.buton-carrito-e{/*BOTON Editar*/
+    background-color: cadetblue;
+}
+
+.buton-carrito-e:hover {
+    transition: all .4s;
+    background-color: blue;
+}
+
+/*INGRE*/
+.ingre{
+    position: fixed;
+    /* display: flex; */
+    background-color: white;
+    padding: 10px;
+    margin: 100px 450px;
+    box-shadow: 0px 0px 10px 0px;
+}
+
+/*PLATOS*/
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #CACACA;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+}
+
+
+.buton-producto{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 50px;
+}
+.buton-producto:hover{
+    background-color: #3A863D;
+}
+
+.producto-editar{
+    display: flex;
+    align-items: center;
+    border: 1px solid #CACACA;
+    border-radius: 5px;
+}
+
+.producto-editar a{
+    text-decoration: none;
+    color: grey;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    padding: 2px;
+}
+.producto-editar a:hover{
+    color: #333;
+}
+
+/*PEDIDOS*/
+.pedidos{
+    display: flex;
+    margin-left: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pedidos a{
+    text-decoration: none;
+    color: #333;
+}
+
+.pedidos-contenido{
+    border: 1px solid #CACACA;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 200px;
+}
+
+.pedidos-contenido:hover{
+    transition: all 0.5s;
+    border: none;
+    box-shadow: 0px 0px 12px 0px;
+}
+
+.pedidos-contenido-title{
+    background-color: #333;
+    color: white;
+    padding: 5px 20px;
+}
+
+.pedidos-contenido h4{
+    text-align: center;
+}
+/*HEADER*/
+.nav{
+	display: flex;
+	align-items: center;
+    justify-content: space-around;
+    background-color: cadetblue;
+    padding: 10px;
+}
+
+.nav h2{
+	font-weight: 900;
+}
+
+.nav-menu{
+	list-style: none;
+	display: flex;
+	gap: 20px;
+}
+.nav-menu-item a{
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
+}
+.nav-menu-item a:hover{
+	transition: all .4s;
+	color: white; 
+}
+/*
+styles sucursales
+*/
+.material-symbols-outlined {
+        cursor: pointer;
+        background: #F33627;
+        border-radius: 4px;
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a .material-symbols-outlined {
+        background:#099122 ;
+    }
+        #table{
+        margin-left: 15%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        text-align: center;
+        align-items: center;
+    }
+    .del{
+        background: red;
+    }
+    #table th{
+        padding: 4px;
+        color:var(--header-font-color);
+        background: var(--table-th-color);
+
+    }
+    #table td{
+        
+        padding: 4px;
+    }
+    #table tr:hover{
+        background: gray;
+    }
+    #table .gray{
+        background: #D6D6E0;
+    }
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #CACACA;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #333;    /* color of the scroll thumb */
+}
+
+/*INDEX*/
+
+section{
+	padding: 10px;
+}
+
+.links li input[ type="submit"] {
+    position: relative;
+    padding: 10px 20px;
+    background-color: cadetblue; 
+    color: white;
+    border-radius: 5px;
+    width: 230px;
+    height: 70px;
+    cursor: pointer;
+    }
+.links li input[type="submit"]:hover {
+    background-color: cadetblue; 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    width: 230px;
+    height: 70px;
+    border-radius: 5px;
+    
+} 
+.menu{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.menu .links{
+    list-style: none;
+}
+.menu .links input[type="submit"]{
+    margin-bottom: 15px;
+    width: 230px;
+    height:70px;
+    padding: 30px;
+    color:var(--header-font-color);
+}
+#box{
+    display: flex;
+    justify-content: center;
+}
+.h-esta{
+    height: 40px;
+    padding-top: 10px;
+    width: 100%;
+    background: rgba(54, 162, 235, 0.2);
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/*CARRITO*/
+
+.carrito {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    max-height: 180px;
+    overflow-x: auto;
+}
+
+.carrito::-webkit-scrollbar {
+    height: 8px;               /* width of the entire scrollbar */
+}
+
+.carrito::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+}
+
+.carrito::-webkit-scrollbar-thumb {
+    background-color: #333;    /* color of the scroll thumb */
+}
+
+#lista-carrito {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+#lista-carrito li {
+    padding: 5px;
+    border: 1px solid #CACACA;
+    margin-left: 10px;
+    border-radius: 10px;
+    min-width: max-content;
+    text-align: center;
+}
+
+.caja-pedido{
+    display: flex;
+    position: sticky;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.caja-pedido h2{
+    display: flex;
+}
+
+button{
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buton-carrito-v{/*BOTON VER PEDIDO*/
+    background-color: #333;
+}
+
+.buton-carrito-v:hover {
+    transition: all .4s;
+    background-color: grey;
+}
+
+.buton-carrito-r{/*BOTON REALIZAR*/
+    background-color: #4CAF50;
+    margin-top: 15px;
+}
+
+.buton-carrito-r:hover {
+    transition: all .4s;
+    background-color: #3A863D;
+}
+
+.buton-carrito-c{/*BOTON CANCELAR*/
+    background-color: #f44336;
+}
+
+.buton-carrito-c:hover {
+    transition: all .4s;
+    background-color: #D54035;
+}
+
+.buton-carrito-e{/*BOTON Editar*/
+    background-color: cadetblue;
+}
+
+.buton-carrito-e:hover {
+    transition: all .4s;
+    background-color: blue;
+}
+
+/*INGRE*/
+.ingre{
+    position: fixed;
+    /* display: flex; */
+    background-color: white;
+    padding: 10px;
+    margin: 100px 450px;
+    box-shadow: 0px 0px 10px 0px;
+}
+
+/*PLATOS*/
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #CACACA;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+}
+
+
+.buton-producto{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 50px;
+}
+.buton-producto:hover{
+    background-color: #3A863D;
+}
+
+.producto-editar{
+    display: flex;
+    align-items: center;
+    border: 1px solid #CACACA;
+    border-radius: 5px;
+}
+
+.producto-editar a{
+    text-decoration: none;
+    color: grey;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    padding: 2px;
+}
+.producto-editar a:hover{
+    color: #333;
+}
+
+/*PEDIDOS*/
+.pedidos{
+    display: flex;
+    margin-left: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pedidos a{
+    text-decoration: none;
+    color: #333;
+}
+
+.pedidos-contenido{
+    border: 1px solid #CACACA;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 200px;
+}
+
+.pedidos-contenido:hover{
+    transition: all 0.5s;
+    border: none;
+    box-shadow: 0px 0px 12px 0px;
+}
+
+.pedidos-contenido-title{
+    background-color: #333;
+    color: white;
+    padding: 5px 20px;
+}
+
+.pedidos-contenido h4{
+    text-align: center;
+}
+/*HEADER*/
+.nav{
+	display: flex;
+	align-items: center;
+    justify-content: space-around;
+    background-color: cadetblue;
+    padding: 10px;
+}
+
+.nav h2{
+	font-weight: 900;
+}
+
+.nav-menu{
+	list-style: none;
+	display: flex;
+	gap: 20px;
+}
+.nav-menu-item a{
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
+}
+.nav-menu-item a:hover{
+	transition: all .4s;
+	color: white; 
+}
+.table{
+    margin-left: 40px;
+    background: red;
+}
